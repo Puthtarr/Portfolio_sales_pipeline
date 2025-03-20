@@ -67,7 +67,7 @@ Create sales_dwh Database
 ```bash```
 python setup_database.py
 
-### Step 5: Create Table
+### Step 5: Create Table in PostgreSQL
 - Create amazon_sales Table in PostgreSQL
 - **Run the script**:  
 ```bash```
@@ -80,9 +80,30 @@ python create_table.py
 ```bash```
 python import_clean_data.py
 
-### Step 7: BI & Analytics
-- Connect PostgreSQL to Looker Studio
-- Create dashboards to visualize Sales, Discounts, Ratings, etc.
+### Step 7: Load Curated Data into BigQuery (Optional Cloud)
+- Load curated data (Clean_data.csv) into BigQuery
+- **Run the script**: 
+```bash```
+python load_clean_data_to_bigquery.py
+
+
+### Step 8: BI & Analytics Dashboard (Looker Studio)
+- Connect to PostgreSQL or BigQuery in Looker Studio
+- Create interactive dashboards to visualize:
+- - Sales Performance
+- - Discounts Analysis
+- - Customer Ratings
+- - Product Categories
+- - Top Products by Revenue
+- Example filters:
+- - Date Range
+- - Category
+- - Price Range
+
+## 📊 Live Dashboard (Looker Studio)
+[👉 Click to View Dashboard](https://lookerstudio.google.com/reporting/xxxxxxxxxxxx)
+
+This dashboard visualizes Amazon sales data with interactive filters and KPIs.
 
 ✅ Requirements
 - pyspark==3.5.1
@@ -90,7 +111,6 @@ python import_clean_data.py
 - psycopg2-binary
 - python-dotenv
 - kagglehub
-
 
 🙌 Author
 Puthtarr | GitHub
